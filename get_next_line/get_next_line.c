@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <stdio.h>
 
 int					get_next_line(const int fd, char **line)
 {
@@ -26,7 +24,6 @@ int					get_next_line(const int fd, char **line)
 		return (-1);
 	if (!lineof[fd])
 		lineof[fd] = ft_strnew(0);
-		ft_strdel(lineof);
 	while ((countchars = read(fd, buff, BUFF_SIZE)) > 0)
 	{
 		buff[countchars] = '\0';
@@ -41,41 +38,4 @@ int					get_next_line(const int fd, char **line)
 		return (0);
 	lineof[fd] = ft_strdup(lineof[fd] + pos + 1);
 	return (1);
-}
-
-int	main()
-{
-	int fd1 = open("anas", O_RDONLY);
-	int fd2 = open("text", O_RDONLY);
-
-	char *line;
-	int i;
-	int c = 0;
-// while (1)
-// {
-	// while ((i = (get_next_line(fd1, &line))))
-	// {
-	// 	c++;
-	// 	//printf("%d\n", c);
-	// 	printf("%s\n", line);
-	// 	free(line);
-
-	// }
-// }
-	get_next_line(fd1, &line);
-	ft_putendl(line);
-
-	get_next_line(fd2, &line);
-	ft_putendl(line);
-
-	get_next_line(fd1, &line);
-	ft_putendl(line);
-
-	get_next_line(fd2, &line);
-	ft_putendl(line);
-
-	get_next_line(fd1, &line);
-	ft_putendl(line);
-
-	return (0);
 }

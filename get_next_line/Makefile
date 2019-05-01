@@ -21,9 +21,9 @@ $(NAME):
 	ar rc $(NAME) *.o
 
 clean:
-	rm -rf *.o
+	rm -rf *.o libft/*.o
 
 fclean: clean
-	rm -rf *.a
+	rm -rf *.a libft/*.a *out*
 
 re: fclean all
