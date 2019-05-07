@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: myd <myd@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 06:31:31 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/04/12 06:38:18 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/05/03 05:46:51 by myd              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int	pos;
 	int multiplier;
 	int total;
 
-	pos = 0;
 	multiplier = 1;
 	total = 0;
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f' ||

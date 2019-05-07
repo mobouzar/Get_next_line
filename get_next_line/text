@@ -2158,4 +2158,3 @@ PID    COMMAND      %CPU  TIME     #TH    #WQ  #PORT MEM    PURG   CMPRS  PGRP  
 34836  OSDUIHelper  0.0   00:00.33 3      1    158   4132K  0B     6372K  34836 1
 34830  Google Chrom 0.0   00:01.04 14     1    114   14M    0B     12M    33020 33020
 34675  Google Chrom 0.0   00:01.43 14     1    115   66M    0B     21M    33020 33020
-34669  Google Chrom 0.0   00:02.46 14     1    115   5144K  0B     66M    33020 33020

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 05:22:58 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/05/01 05:24:18 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/05/07 00:31:26 by mobouzar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,18 @@
 
 int	main(void)
 {
-	int		fd;
+	int 	fd;
 	char	*line;
 	int		i;
+	int		c = 1;
 
 	fd = open("text", O_RDONLY);
-	while ((i = (get_next_line(fd, &line))))
+	while ((i = (get_next_line(fd, &line))) == 1)
 	{
-		printf("%d\n", i);
-		printf("%s\n", line);
-		free(line);
+		printf("%d = %s\n", c, line);
+		c++;
+		ft_strdel(&line);
 	}
+	ft_strdel(&line);
 	return (0);
 }

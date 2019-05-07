@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobouzar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/24 21:48:03 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/04/24 21:48:05 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/05/06 05:04:27 by mobouzar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include "libft/libft.h"
 # define BUFF_SIZE 32
 
-int			get_next_line(const int fd, char **line);
+typedef struct	s_gnl
+{
+	char		buff[BUFF_SIZE + 1];
+	int			c;
+	int			p;
+}				t_gnl;
+
+int				get_next_line(const int fd, char **line);
 
 #endif
