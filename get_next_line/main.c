@@ -6,7 +6,7 @@
 /*   By: mobouzar <mobouzar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 05:22:58 by mobouzar          #+#    #+#             */
-/*   Updated: 2019/05/07 00:31:26 by mobouzar         ###   ########.fr       */
+/*   Updated: 2019/05/08 20:56:39 by mobouzar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	int 	fd;
+	int 	fd1;
 	char	*line;
 	int		i;
-	int		c = 1;
 
-	fd = open("text", O_RDONLY);
-	while ((i = (get_next_line(fd, &line))) == 1)
-	{
-		printf("%d = %s\n", c, line);
-		c++;
+	fd1 = open(argv[1], O_RDONLY);
+
+	argc = 1;
+		while (i < 10)
+		{
+			a = get_next_line(fd1, &line);
+			printf("%d = %s\n", c, line);
+			i++;
+			ft_strdel(&line);
+		}
 		ft_strdel(&line);
-	}
-	ft_strdel(&line);
+	lose(fd1);
 	return (0);
 }
