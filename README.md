@@ -8,14 +8,14 @@ It must fit in one source file and one header. Mine works with multiple file des
 
 ```c
     make -C libft/
-    `gcc` your C project `libft/libft.a` `get_next_line.c`
+    ```gcc``` your C project ```libft/libft.a``` ```get_next_line.c```
 ```
 
 # Usage
 
 ```c
-     #include "get_next_line.h"
- char *line;
+#include "get_next_line.h"
+char *line;
 
 // To get a single line
 get_next_line(fd, &line);
