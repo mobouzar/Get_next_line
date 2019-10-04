@@ -6,10 +6,8 @@ It must fit in one source file and one header. Mine works with multiple file des
 
 # Compiling
 
-```c
     make -C libft/
-    ```gcc``` your C project ```libft/libft.a``` ```get_next_line.c```
-```
+    `gcc` your C project `libft/libft.a` `get_next_line.c`
 
 # Usage
 
