@@ -9,7 +9,7 @@ It must fit in one source file and one header. Mine works with multiple file des
 ```c
     make -C libft/
     `gcc` your C project `libft/libft.a` `get_next_line.c`
-    ```
+```
 
 # Usage
 
