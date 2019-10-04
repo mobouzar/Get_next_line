@@ -8,7 +8,7 @@ It must fit in one source file and one header. Mine works with multiple file des
 
 `make` -C libft/
 
-`gcc` your C project `libft/libft.a` `get_next_line.c`
+`gcc` yourfile.c `libft/libft.a` `get_next_line.c`
 
 # Usage
 
